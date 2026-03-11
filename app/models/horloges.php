@@ -11,7 +11,8 @@ class horloges
 
    public function getAllHorloges()
 {
-    $sql = 'SELECT  HRLG.Merk
+    $sql = 'SELECT  HRLG.Id
+                   ,HRLG.Merk
                    ,HRLG.Model
                    ,HRLG.Prijs
                    ,HRLG.Materiaal
@@ -28,4 +29,16 @@ class horloges
     $this->db->query($sql);
     return $this->db->resultSet();
 }
+
+    public function delete($Id)
+    {
+        $sql = "DELETE
+        FROM Horloges
+        WHERE Id = :Id";
+
+        $this->db->query($sql);
+        $this->db->bind(':Id', $Id, PDO::PARAM_INT);
+
+        return $this->db->execute();
+    }
 }

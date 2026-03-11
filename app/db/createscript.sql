@@ -115,7 +115,7 @@ CREATE TABLE Sneakers
 -- ************************************************************
 -- Versie       Datum           Auteur              Omschrijving
 -- ******       *****           ******              ************
--- 01           10-02-2026      Mouiz El Marini    Vulling Sneakers
+-- 01           10-02-2026      Hussein Kadhim    Vulling Sneakers
 -- ************************************************************
 
 INSERT INTO Sneakers
@@ -144,7 +144,7 @@ VALUES
 -- ************************************************************
 -- Versie       Datum           Auteur              Omschrijving
 -- ******       *****           ******              ************
--- 01           11-02-2026      Mouiz El Marini    Tabel Horloges
+-- 01           11-02-2026      Hussein Kadhim    Tabel Horloges
 -- ************************************************************
 
 -- Onderstaande velden toevoegen aan de tabel Horloges
@@ -177,7 +177,7 @@ CREATE TABLE Horloges
 -- ************************************************************
 -- Versie       Datum           Auteur              Omschrijving
 -- ******       *****           ******              ************
--- 01           11-02-2026      Mouiz El Marini    Vulling Horloges
+-- 01           11-02-2026      Hussein Kadhim    Vulling Horloges
 -- ************************************************************
 
 INSERT INTO Horloges
@@ -208,7 +208,7 @@ VALUES
 -- ************************************************************
 -- Versie       Datum           Auteur               Omschrijving
 -- ****** ***** ****** ************
--- 01           12-02-2026       Mouiz El Marini     Tabel Zangeressen
+-- 01           12-02-2026       Hussein Kadhim     Tabel Zangeressen
 -- ************************************************************
 
 -- Onderstaande velden toevoegen aan de tabel Zangeressen
@@ -234,7 +234,7 @@ CREATE TABLE zangeressen
 -- ************************************************************
 -- Versie       Datum           Auteur               Omschrijving
 -- ****** ***** ****** ************
--- 01           12-02-2026       Mouiz El Marini     Vulling Zangeressen
+-- 01           12-02-2026       Hussein Kadhim     Vulling Zangeressen
 -- ************************************************************
 
 INSERT INTO Zangeressen

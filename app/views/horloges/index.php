@@ -7,6 +7,15 @@
         </div>
     </div>
 
+    <!-- Terugkoppeling naar de gebruiker -->
+    <div class="row mt-3 d-<?= $data['display']; ?> justify-content-center">
+        <div class="col-10 text-begin text-primary">
+            <div class="alert alert-success" role="alert">
+                <?= $data['message']; ?>
+            </div>
+        </div>
+    </div>
+
     <div class="row mt-3 d-flex justify-content-center">
         <div class="col-10">
        <table class="table table-striped">
@@ -18,6 +27,7 @@
             <th>Materiaal</th>
             <th>Type</th>
             <th>Kenmerk</th>
+            <th>Verwijder</th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +39,12 @@
                 <td><?= $horloge->Materiaal; ?></td>
                 <td><?= $horloge->Type; ?></td>
                 <td><?= $horloge->UniekKenmerk; ?></td>
+                <td class="text-center">
+                    <a href="<?= URLROOT; ?>/HorlogesController/delete/<?= $horloge->Id; ?>"
+                        onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
+                        <i class="bi bi-trash3-fill text-danger"></i>
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>

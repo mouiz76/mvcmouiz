@@ -11,7 +11,7 @@ define('DB_PASS', '');
 /**
  * De naam van de virtualhost
  */
-define('URLROOT', 'http://www.mvsmouiz.nl');
+define('URLROOT', 'http://www.mvcbackend.nl');
 
 /**
  * Het pad naar de folder app

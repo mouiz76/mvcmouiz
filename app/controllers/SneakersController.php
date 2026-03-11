@@ -9,7 +9,7 @@ class SneakersController extends BaseController
         $this->sneakerModel = $this->model('Sneakers');
     }
 
-    public function index()
+    public function index($display = 'none', $message = '')
     {
         /**
          * Haal de resultaten van de model binnen
@@ -21,6 +21,8 @@ class SneakersController extends BaseController
          */
         $data = [
             'title' => 'Mooiste Sneakers',
+            'display' => $display,
+            'message' => $message,
             'result' => $result
         ];
 
@@ -29,5 +31,14 @@ class SneakersController extends BaseController
          * aangeroepen
          */
         $this->view('sneakers/index', $data);
+    }
+
+    public function delete($Id)
+    {
+        $result = $this->sneakerModel->delete($Id);
+
+        header('Refresh:3 ; url=' . URLROOT . '/SneakersController/index');
+
+        $this->index('flex', 'Record is verwijderd');
     }
 }

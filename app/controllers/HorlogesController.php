@@ -9,7 +9,7 @@ class HorlogesController extends BaseController
         $this->horlogeModel = $this->model('horloges');
     }
 
-    public function index()
+    public function index($display = 'none', $message = '')
     {
         /**
          * Haal de resultaten van de model binnen
@@ -21,6 +21,8 @@ class HorlogesController extends BaseController
          */
         $data = [
             'title' => 'Duurste Horloges',
+            'display' => $display,
+            'message' => $message,
             'result' => $result
         ];
 
@@ -29,5 +31,14 @@ class HorlogesController extends BaseController
          * aangeroepen
          */
         $this->view('horloges/index', $data);
+    }
+
+    public function delete($Id)
+    {
+        $result = $this->horlogeModel->delete($Id);
+
+        header('Refresh:3 ; url=' . URLROOT . '/HorlogesController/index');
+
+        $this->index('flex', 'Record is verwijderd');
     }
 }
